@@ -55,7 +55,7 @@ class RosbagStreamer():
             print(f"Error reading rosbag: {e}")
 
 # Example usage
-rospy.init_node("tester")
+rospy.init_node("s3_rosbag_streamer")
 
 bucket_name = 'd-apne2-rm01-s3-00'
 s3_file_key = 'wm_robot1/2023-11-27/dangerbag1.bag'
