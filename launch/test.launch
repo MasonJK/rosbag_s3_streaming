@@ -1,0 +1,5 @@
+<launch>
+    <node pkg="tf" type="static_transform_publisher" name="velodyne_to_base_link_broadcaster" args="0 0 0 0 0 0 base_link velodyne 100" />
+    <node pkg="rosbag_s3_streaming" name="s3_rosbag_streamer" type="s3_rosbag_streamer.py" output="screen"/>
+    <node name="rviz" pkg="rviz" type="rviz" args="-d $(find rosbag_s3_streaming)/rviz/test.rviz"/>
+</launch>
